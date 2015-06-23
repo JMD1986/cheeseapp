@@ -1,58 +1,31 @@
 Rails.application.routes.draw do
   resources :users
   resources :cheeses
-  # The priority is based upon order of creation: first created -> highest priority.
-  # See how all your routes lay out with "rake routes".
+  resources :sessions
 
-  # You can have the root of your site routed with "root"
-  # root 'welcome#index'
+#        users GET    /users(.:format)             users#index
+#              POST   /users(.:format)             users#create
+#     new_user GET    /users/new(.:format)         users#new
+#    edit_user GET    /users/:id/edit(.:format)    users#edit
+#         user GET    /users/:id(.:format)         users#show
+#              PATCH  /users/:id(.:format)         users#update
+#              PUT    /users/:id(.:format)         users#update
+#              DELETE /users/:id(.:format)         users#destroy
+#      cheeses GET    /cheeses(.:format)           cheeses#index
+#              POST   /cheeses(.:format)           cheeses#create
+#   new_cheese GET    /cheeses/new(.:format)       cheeses#new
+#  edit_cheese GET    /cheeses/:id/edit(.:format)  cheeses#edit
+#       cheese GET    /cheeses/:id(.:format)       cheeses#show
+#              PATCH  /cheeses/:id(.:format)       cheeses#update
+#              PUT    /cheeses/:id(.:format)       cheeses#update
+#              DELETE /cheeses/:id(.:format)       cheeses#destroy
+#     sessions GET    /sessions(.:format)          sessions#index
+#              POST   /sessions(.:format)          sessions#create
+#  new_session GET    /sessions/new(.:format)      sessions#new
+# edit_session GET    /sessions/:id/edit(.:format) sessions#edit
+#      session GET    /sessions/:id(.:format)      sessions#show
+#              PATCH  /sessions/:id(.:format)      sessions#update
+#              PUT    /sessions/:id(.:format)      sessions#update
+#              DELETE /sessions/:id(.:format)      sessions#destroy
 
-  # Example of regular route:
-  #   get 'products/:id' => 'catalog#view'
-
-  # Example of named route that can be invoked with purchase_url(id: product.id)
-  #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
-
-  # Example resource route (maps HTTP verbs to controller actions automatically):
-  #   resources :products
-
-  # Example resource route with options:
-  #   resources :products do
-  #     member do
-  #       get 'short'
-  #       post 'toggle'
-  #     end
-  #
-  #     collection do
-  #       get 'sold'
-  #     end
-  #   end
-
-  # Example resource route with sub-resources:
-  #   resources :products do
-  #     resources :comments, :sales
-  #     resource :seller
-  #   end
-
-  # Example resource route with more complex sub-resources:
-  #   resources :products do
-  #     resources :comments
-  #     resources :sales do
-  #       get 'recent', on: :collection
-  #     end
-  #   end
-
-  # Example resource route with concerns:
-  #   concern :toggleable do
-  #     post 'toggle'
-  #   end
-  #   resources :posts, concerns: :toggleable
-  #   resources :photos, concerns: :toggleable
-
-  # Example resource route within a namespace:
-  #   namespace :admin do
-  #     # Directs /admin/products/* to Admin::ProductsController
-  #     # (app/controllers/admin/products_controller.rb)
-  #     resources :products
-  #   end
-end
+ end
