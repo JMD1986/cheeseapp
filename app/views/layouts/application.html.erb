@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>:CheeZ:</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<header class='main'>
+    <div class='row'>
+      <div class='col-sm-4'>
+        <h1><%= link_to 'CheeZ', root_path %></h1>
+      </div>
+    </div>
+  </header>
+<body>
+
+<%= yield %>
+
+</body>
+</html>
