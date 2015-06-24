@@ -1,10 +1,10 @@
-class CheesesController < ApplicationController
+class CheeseController < ApplicationController
   before_action :set_cheese, only: [:show, :edit, :update, :destroy]
 
   # GET /cheeses
   # GET /cheeses.json
   def index
-    @cheeses = Cheese.all
+    @cheese = Cheese.all
   end
 
   # GET /cheeses/1
@@ -37,19 +37,6 @@ class CheesesController < ApplicationController
     end
   end
 
-  # PATCH/PUT /cheeses/1
-  # PATCH/PUT /cheeses/1.json
-  def update
-    respond_to do |format|
-      if @cheese.update(cheese_params)
-        format.html { redirect_to @cheese, notice: 'Cheese was successfully updated.' }
-        format.json { render :show, status: :ok, location: @cheese }
-      else
-        format.html { render :edit }
-        format.json { render json: @cheese.errors, status: :unprocessable_entity }
-      end
-    end
-  end
 
   # DELETE /cheeses/1
   # DELETE /cheeses/1.json
@@ -69,6 +56,6 @@ class CheesesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def cheese_params
-      params.require(:cheese).permit(:family, :type)
+      params.require(:cheese).permit(:name, :style, :user_id)
     end
 end

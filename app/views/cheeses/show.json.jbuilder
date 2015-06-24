@@ -1,1 +1,1 @@
-json.extract! @cheese, :id, :name, :style, :user_id, :created_at, :updated_at
+json.extract! @cheese, :id, :family, :type, :created_at, :updated_at

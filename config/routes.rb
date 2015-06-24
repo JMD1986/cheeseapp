@@ -1,7 +1,14 @@
 Rails.application.routes.draw do
-  resources :users
   resources :cheeses
+  resources :users
   resources :sessions
+
+  root "cheeses#index"
+
+  get '/login', to: "session#new", as: 'login'
+  post '/login', to: "session#create", as: 'create_session'
+  get '/logout', to: "session#destroy", as: 'logout'
+  get '/signup', to: "users#new"
 
 #        users GET    /users(.:format)             users#index
 #              POST   /users(.:format)             users#create
